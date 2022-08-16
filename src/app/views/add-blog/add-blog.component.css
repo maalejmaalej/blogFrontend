@@ -1,0 +1,31 @@
+.addForm{
+  width: 700px;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  background-color: rgba(128, 128, 128, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.26);
+  border-radius: 10px;
+
+}
+.form-control{
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.82);
+  margin: 6px 0px;
+}
+.retourButton{
+  width: 800px;
+  margin: auto;
+  margin-top: 30px;
+
+}
+.addButton{
+  background-color: green;
+  color: white
+}
+.addButtonDisable{
+  background-color: rgba(0, 128, 0, 0.59);
+}

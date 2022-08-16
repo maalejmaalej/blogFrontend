@@ -1,0 +1,30 @@
+
+<div class="topBar">
+  <div class="search">
+        <span class="input-group-text " style="margin: 0px 5px"  id="search-addon">
+      <i class="fas fa-search"></i>
+    </span>
+    <input type="search" class="form-control inputSearch" placeholder="Search" aria-label="Search" aria-describedby="search-addon" [(ngModel)]="search" (change)="getBlogs()"/>
+  </div>
+</div>
+<div class="addButtun" >
+<button mat-button color="primary" style="background-color: green; color: white" (click)="goToAddBlog()">Add Blog</button>
+</div>
+
+  <div *ngFor="let blog of blogs" class="blog py-5">
+  <div class="container" >
+    <mat-card [class.yes]="blog['upvote']>blog['downvote']" [class.no]="blog['upvote']<blog['downvote']">
+      <mat-card-title>{{blog['title']}}</mat-card-title>
+      <mat-card-subtitle>by : {{blog['author']}}</mat-card-subtitle>
+      <mat-card-actions >
+        {{blog['content']}}
+      </mat-card-actions>
+      <div class="actionBlog">
+      <i class="fas fa-thumbs-up mb-3 mr-3 like" (click)="upvote(blog)"> {{blog["upvote"]}}</i>
+      <i class="fas fa-thumbs-down mb-3 dislike" (click)="downvote(blog)"> {{blog["downvote"]}}</i>
+        <button mat-stroked-button (click)="goToBlogDetail(blog['id'])">view more</button>
+      </div>
+    </mat-card>
+</div>
+
+</div>

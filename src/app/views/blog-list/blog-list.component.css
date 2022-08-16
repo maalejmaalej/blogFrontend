@@ -1,0 +1,50 @@
+.topBar{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.89);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search{
+  height: 80%;
+  background-color: white;
+}
+.inputSearch{
+  width: 400px;
+  height: 100%;
+  border-color: white;
+}
+.inputSearch:focus{
+  border-color: white;
+}
+.container{
+  background-color: aliceblue;
+  margin: 10px 500px;
+}
+.actionBlog{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.like{
+  color: #0c0c9f;
+  cursor: pointer;
+}
+.dislike{
+  color: red;
+  cursor: pointer;
+}
+.yes{
+ background-color: rgba(46, 148, 46, 0.15);
+}
+.no{
+  background-color: rgba(255, 0, 0, 0.13);
+
+}
+.addButtun{
+  margin: 10px 500px;
+  display: flex;
+  justify-content: flex-end;
+}

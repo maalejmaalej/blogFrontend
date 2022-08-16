@@ -1,0 +1,17 @@
+<div class="retourButton">
+  <button mat-button style="background-color: #bdbdbd" (click)="goTolist()"><i class="fa-solid fa-circle-arrow-left"></i> Back to Blog list</button>
+</div>
+
+<div class="container" >
+  <mat-card [class.yes]="blog['upvote']>blog['downvote']" [class.no]="blog['upvote']<blog['downvote']">
+    <mat-card-title>{{blog['title']}}</mat-card-title>
+    <mat-card-subtitle>by : {{blog['author']}}</mat-card-subtitle>
+    <mat-card-actions >
+      {{blog['content']}}
+    </mat-card-actions>
+    <div class="actionBlog">
+      <i class="fas fa-thumbs-up mb-3 mr-3 like" (click)="upvote()"> {{blog["upvote"]}}</i>
+      <i class="fas fa-thumbs-down mb-3 dislike" (click)="downvote()"> {{blog["downvote"]}}</i>
+    </div>
+  </mat-card>
+</div>
